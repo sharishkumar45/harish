@@ -1,0 +1,28 @@
+package que6;
+
+import java.util.Scanner;
+
+public class prime_number {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input= new Scanner(System.in);
+		System.out.print("Enter your desired number.. your fav number : ");
+		int x=input.nextInt();
+		if(x==0)
+		System.out.println("Number is neither Prime nor Composite");
+		else
+		{
+		int i;
+		int c=0;
+		for (i=1;i<=x;i++)
+			{
+			 if ((x%i)==0)
+			  c=c+1;
+			}
+		if (c==2)
+	  System.out.println("entered number is a Prime Number");
+		else System.out.println("Number is a Composite Number");
+	    }
+	}
+}
