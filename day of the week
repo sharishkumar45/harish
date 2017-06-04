@@ -1,0 +1,36 @@
+package ques2;
+import java.util.*;
+import java.text.*;
+public class week_name {
+
+	public static void main(String[] args) throws ParseException {
+		// TODO Auto-generated method stub
+		System.out.print("enter your date in the format - dd/mm/yyyy : ");
+		Scanner input= new Scanner(System.in);
+		String x=input.next();
+		SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy");
+		Date y = date.parse(x);
+		date.applyPattern("EEEE");
+		String z = date.format(y);
+        switch(z)
+        {
+        	case "Monday": System.out.println("Day of the week is : "+z);
+        	break;
+        	case "Tuesday": System.out.println("Day of the week is : "+z);
+        	break;
+        	case "Wednesday": System.out.println("Day of the week is : "+z);
+        	break;
+        	case "Thursday": System.out.println("Day of the week is : "+z);
+        	break;
+        	case "Friday": System.out.println("Day of the week is : "+z);
+        	break;
+        	case "Saturday": System.out.println("Day of the week is : "+z);
+        	break;
+        	case "Sunday": System.out.println("Day of the week is : "+z);
+        	break;
+        	default: System.out.println("invalid date");
+        	break;
+        }
+	}
+
+}
